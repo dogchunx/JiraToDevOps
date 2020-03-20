@@ -151,7 +151,7 @@ namespace JiraToDevOps
         {
             var parts = user.ToLower().Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-            return $"{parts[0]}.{parts[1]}@brandpath.com";
+            return $"{parts[0]}.{parts[1]}@domain.com";
         }
 
         private int MapPriority(IssuePriority priority)
