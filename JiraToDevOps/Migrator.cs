@@ -110,7 +110,7 @@ namespace JiraToDevOps
         {
             var comments = await _jiraClient.Issues.GetCommentsAsync(jiraIssue.JiraIdentifier).ConfigureAwait(false);
 
-            foreach (var comment in comments?.Reverse())
+            foreach (var comment in comments)
             {
                 var commentPatch = CreateCommentPatch(comment.Body, MapUser(comment.AuthorUser.DisplayName), comment.CreatedDate);
 
